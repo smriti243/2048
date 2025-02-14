@@ -89,7 +89,7 @@ function moveTiles(direction) {
             while (targetRow < 3 && board[targetRow+1][col] === 0) {
               targetRow++;
             }
-            if (board[targetRow+1][col] === board[row][col]){
+            if (targetRow>3 && board[targetRow+1][col] === board[row][col]){
                  
             board[targetRow+1][col] = board[row][col] * 2;
             board[row][col] = 0;
@@ -122,7 +122,7 @@ function moveTiles(direction) {
             while (targetRow > 0 && board[targetRow-1][col] === 0) {
               targetRow--;
             }
-            if (board[targetRow-1][col] === board[row][col]){
+            if (targetRow>0 && board[targetRow-1][col] === board[row][col]){
                  
             board[row-1][col] = board[row][col] * 2;
             board[row][col] = 0;
