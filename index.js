@@ -42,6 +42,14 @@ function startGame() {
     } else if (event.key === "ArrowRight") {
       moveTiles("right");
     }
+    let randomTile = Math.floor(Math.random() * 16);
+    while (board[Math.floor(randomTile/4)][randomTile%4] !==0){
+      randomTile = Math.floor(Math.random() * 16);
+    }
+    board[Math.floor(randomTile/4)][randomTile%4] = Math.floor(Math.random() * 2) ===  0 ? 2: 4;
+
+    updateBoard();
+    
   });
 }
 
@@ -216,4 +224,4 @@ function moveTiles(direction) {
   updateBoard();
 }
 
-//function to merge tiles
+
