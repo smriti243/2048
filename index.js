@@ -76,10 +76,29 @@ function updateBoard() {
       //changing the color of tiles based on their values
       if (board[row][col] === 2){
         tiles[index].style.backgroundColor = "#EEE4DA";
+        tiles[index].style.color = "#776E65";
       } else if (board[row][col] === 4) {
         tiles[index].style.backgroundColor = "#EDE0C8";
+        tiles[index].style.color = "#776E65";
       } else if (board[row][col] === 8) {
         tiles[index].style.backgroundColor = "#F2B179";
+        tiles[index].style.color = "#F9F6F2";
+      }
+      else if(board[row][col] === 16){
+        tiles[index].style.backgroundColor = "#F59563";
+        tiles[index].style.color = "#F9F6F2";
+      }
+      else if(board[row][col] === 32){
+        tiles[index].style.backgroundColor = "#F67C5F";
+        tiles[index].style.color = "#F9F6F2";
+      }
+      else if(board[row][col] === 64){
+        tiles[index].style.backgroundColor = "#F65E3B";
+        tiles[index].style.color = "#F9F6F2";
+      }
+      else {
+        tiles[index].style.backgroundColor = "#EDCF72";
+        tiles[index].style.color = "#F9F6F2";
       }
     }
   }
